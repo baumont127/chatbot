@@ -1,0 +1,36 @@
+
+{% extends "app_veille/base.html" %}
+{% load static %}
+{% block content %}
+{% block css %}
+    {% include "app_veille/css.html" %}
+{% endblock %}
+
+<div class="header">
+    <h1>Enregistrer votre ressource</h1>
+  </div>
+  
+  <div class="form_container">
+
+    <form action="{% url 'form_ressource' %}" method="post">
+        {% csrf_token %}
+        <div>
+          <label>Lien</label>
+            {{ form.lien }}
+        </div>
+
+      <div>
+        <label>Type ressource</label>
+        {{ form.ressource }}
+        
+      </div>
+    </br>
+        <input class="btn_submit" type="submit" value="Enregistrer">
+
+
+    </form>
+
+
+    
+  </div>
+{% endblock %}

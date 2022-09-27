@@ -1,0 +1,41 @@
+
+{% extends "app_veille/base.html" %}
+{% load static %}
+
+{% block css %}
+    {% include "app_veille/css.html" %}
+{% endblock %}
+{% block content %}
+
+
+<a href="{% url 'logout' %}">
+  <img class="topright" src="{% static 'img/logout.png' %}", title="Logout">
+</a>
+<div class="header">
+  <h1>Bienvenue sur votre plateforme d'ajout et de recherche de ressources numériques </h1>
+</div>
+
+
+<div class="container">
+    <div class="card">
+      <div class="imgBx">
+        <img src="{% static 'img/sauvegarde.png' %}">
+      </div>
+      <div class="contentBx">
+        <h2>Ajouter une ressources</h2>
+        <a href="{% url 'form_ressource' %}">Acces</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgBx">
+        <img src="{% static 'img/chatbot.png' %}">
+      </div>
+      <div class="contentBx">
+        <h2>Consulter une ressources</h2>
+        <a href="{% url 'chatbot' %}">Acces</a>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

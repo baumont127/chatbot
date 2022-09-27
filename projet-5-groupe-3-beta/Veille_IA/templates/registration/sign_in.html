@@ -1,0 +1,44 @@
+{% extends "app_veille/base.html" %}
+{% load static %}
+{% block content %}
+{% block css %}
+    {% include "app_veille/css.html" %}
+{% endblock %}
+
+<div class="header">
+    <h1>Inscription à la plateforme</h1>
+  </div>
+  
+  <div class="form_container">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+          <label>Login</label>
+            <input type="text" name="username" id="username" class="">
+        </div>
+
+      <div>
+        <label>Mot de passe</label>
+            <input type="password" name="password" id="password" class="">
+        
+      </div>
+      <div>
+        <label>Retaper le mot de passe</label>
+            <input type="password" name="password2" id="password2" class="">
+        
+      </div>
+    </br>
+        <input class="btn_submit" type="submit" value="Connexion">
+
+    </form>
+    {% if messages %}
+  <ul class="messages">
+      {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.messages {
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    right: 20px;
+    position: absolute;
+    top: 300px;
+    width: 100%;
+
+
+}
+a {
+    color: #0066cc;
+}

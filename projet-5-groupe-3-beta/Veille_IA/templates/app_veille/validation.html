@@ -1,0 +1,22 @@
+{% extends "app_veille/base.html" %}
+{% load static %}
+{% block content %}
+
+{% block css %}
+    {% include "app_veille/css.html" %}
+{% endblock %}
+<div class="header">
+<h1> Votre ressource à bien été ajouter !</h1>
+</div>
+  <div class="container">
+        <img src="{% static 'img/valider.png' %}" class="center">
+    </div>
+    <button class="home_button"
+    type="button"><a href="{% url 'index' %}">Retour à l'accueil</a>
+
+</button>
+</div>
+
+
+
+{% endblock %}
